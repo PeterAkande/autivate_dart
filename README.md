@@ -4,8 +4,9 @@
 [![Powered by Mason](https://img.shields.io/endpoint?url=https%3A%2F%2Ftinyurl.com%2Fmason-badge)](https://github.com/felangel/mason)
 [![License: MIT][license_badge]][license_link]
 
-The Dart SDK for the [Authivate]('https://authivate.com') service
-Authivate is 
+The Dart SDK for the [Authivate](https://authivate.com) service
+
+Authivate is a User Authentication and Management Platform
 ## Installation 💻
 
 **❗ In order to start using Authivate you must have the [Dart SDK][dart_install_link] installed on your machine.**
