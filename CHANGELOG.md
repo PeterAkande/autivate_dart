@@ -5,3 +5,7 @@
 # 0.1.0+2
 
 - feat: Update ReadMe.md
+
+# 0.1.0+2
+
+- chore: Update Files Layout
