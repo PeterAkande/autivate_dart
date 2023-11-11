@@ -64,11 +64,16 @@ class Authivate with RequestMixin {
     final uri = Uri.https(config.host, url);
 
     final response = await postRequest(
-        uri: uri, client: client, headers: _headers, body: body);
+      uri: uri,
+      client: client,
+      headers: _headers,
+      body: body,
+    );
 
     return response;
   }
 
+  /// Sign in a user to the project
   Future<AuthivateResponse> signInUser({
     required String emailAddress,
     String password = '',
@@ -85,7 +90,11 @@ class Authivate with RequestMixin {
     final uri = Uri.https(config.host, url);
 
     final response = await postRequest(
-        uri: uri, client: client, headers: _headers, body: body);
+      uri: uri,
+      client: client,
+      headers: _headers,
+      body: body,
+    );
 
     return response;
   }

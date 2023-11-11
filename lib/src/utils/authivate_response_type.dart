@@ -1,7 +1,7 @@
 import 'package:authivate/src/utils/authivate_failure.dart';
 import 'package:dartz/dartz.dart';
 
-/// The Default response Type for all service calls made to the Authivate Service
+/// The Default response Type for all service call made to the Authivate Service
 typedef AuthivateResponse = Either<AuthivateFailure, Map<String, dynamic>>;
 
 /// @nodoc

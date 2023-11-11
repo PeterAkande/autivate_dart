@@ -2,8 +2,8 @@ import 'dart:convert';
 import 'dart:io';
 import 'package:http/http.dart' show Response;
 
-/// This is the Data class for All failures that happens when making calls to the
-/// authivate API
+/// This is the Data class for All failures that happens when making calls to
+/// the authivate API
 class AuthivateFailure {
   /// The constructor
   AuthivateFailure({
@@ -18,20 +18,26 @@ class AuthivateFailure {
   factory AuthivateFailure.fromException(Object? exception) {
     if (exception is SocketException) {
       final failure = AuthivateFailure(
-          statusCode: 0, responseBody: {}, message: 'Error in Connection');
+        statusCode: 0,
+        responseBody: {'message': 'Error In Connection'},
+        message: 'Error in Connection',
+      );
 
       return failure;
     }
 
     final failure = AuthivateFailure(
-        statusCode: 0, responseBody: {}, message: 'Unknown Error Occurred');
+      statusCode: 0,
+      responseBody: {'message': 'Error In Connection'},
+      message: 'Unknown Error Occurred',
+    );
 
     return failure;
   }
 
   /// Constructs a Failure from the failed reponse, a typical 4** error
   factory AuthivateFailure.fromFailedResponse(Response resp) {
-    String error = '';
+    late final String error;
 
     final decodedResponse = jsonDecode(resp.body) as Map<String, dynamic>;
 
@@ -46,7 +52,10 @@ class AuthivateFailure {
     }
 
     final failure = AuthivateFailure(
-        statusCode: resp.statusCode, responseBody: resp.body, message: error);
+      statusCode: resp.statusCode,
+      responseBody: resp.body,
+      message: error,
+    );
     return failure;
   }
 
