@@ -9,3 +9,7 @@
 # 0.1.0+3
 
 - chore: Update Files Layout
+
+# 0.1.0+4
+
+- chore: Add User Record Model
