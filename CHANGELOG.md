@@ -13,3 +13,7 @@
 # 0.1.0+4
 
 - chore: Add User Record Model
+
+# 0.1.0+5
+
+- feat: Add Waitlist Signup Functionality

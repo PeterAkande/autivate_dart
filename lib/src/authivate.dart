@@ -136,4 +136,32 @@ class Authivate with RequestMixin {
 
     return response;
   }
+
+  /// Signs up a user for the particular Project
+  Future<AuthivateResponse> addUserToWaitlist({
+    required String emailAddress,
+    required String lastName,
+    required String firstName,
+  }) async {
+    const url = 'api/v1/p/user/signup/';
+
+    final body = {
+      'email_address': emailAddress,
+      'project_id': config.projectId,
+      'first_name': firstName,
+      'last_name': lastName,
+      'signup_status': 'WAITLISTED',
+    };
+
+    final uri = Uri.https(config.host, url);
+
+    final response = await postRequest(
+      uri: uri,
+      client: client,
+      headers: _headers,
+      body: body,
+    );
+
+    return response;
+  }
 }

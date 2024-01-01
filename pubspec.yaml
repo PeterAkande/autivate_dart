@@ -1,6 +1,6 @@
 name: authivate
 description: The Dart SDK for the Authivate, a user manaagement and authentication service
-version: 0.1.0+4
+version: 0.1.0+5
 
 repository: https://github.com/PeterAkande/autivate_dart
 
